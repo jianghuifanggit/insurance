@@ -1,0 +1,20 @@
+<!--pages/car_company/car_company.wxml-->
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">确定投保公司</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <image class='content-icon' src="../../images/user.png" bindtap='about'></image>
+  </view>
+   <view class='mb'></view>
+  <view class="content" wx:for="{{list}}" wx:for-item="items" wx:key="{{id}}">
+    <checkbox-group bindchange="checkboxChange" class="car-container" >   
+     <label>  
+          <checkbox value="{{items.id}}" class="hide" />  
+          <view class="car-box"></view>
+          <image src="https://www.4006723723.cn/data/upload/{{items.thumb}}" class="car-img" style='width:'></image> 
+           <view class="car-name" >{{items.com_name}}</view> 
+        </label>
+    </checkbox-group>   
+  </view>
+</view>

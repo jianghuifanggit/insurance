@@ -1,0 +1,66 @@
+<!--pages/order_detail/order_detail.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">保单详情</view>
+    <!-- <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <image class='content-icon' mode="scaleToFill" src="../../images/user.png" bindtap='about'></image>
+  </view>
+   <view class='mb'></view>
+  <view class='insure-tip'>
+  <image class='insure-img' mode="scaleToFill" src="../../images/insure.png"></image>
+  <text class="insure-text" >{{info.com_name}}</text>
+  </view>
+  <view class='insure-head'>
+ <view class='center'>
+ <image class='com-icon' src="https://www.4006723723.net/data/upload/{{info.thumb}}" ></image>
+ </view>
+  <view class='center com_name'>{{info.com_name}}</view>
+  <view class='center' style='font-size:0.9em'>保单总价：
+  <text class='money-color'>￥{{info.price}}</text>
+  </view>
+  </view>
+  <view class="message-one">
+    <view class="message-title">
+      <text class="text"></text>车辆和车主信息</view>
+    <view class="content">车牌号：{{info.plate_prefix}}{{info.plate_no}}</view>
+    <view class="content">承包城市：{{info.address_city}}</view>
+    <view class="content">车主姓名：{{info.owner}}</view>
+    <view class="content">品牌型号：{{info.brand}}</view>
+    <view class="content">车辆识别码：{{info.vin}}</view>
+    <view class="content">发动机号：{{info.engine_no}}</view>
+    <view class="content">注册登记日期：{{info.register_date}}</view>
+    <view class="content">发证日期：{{info.issue_date}}</view>
+  </view>
+  <view class="message-one" style='margin-top:10px;height:108px'>
+    <view class="message-title">
+      <text class="text"></text>生效时间</view>
+    <view class="content">
+      <text style='color:#333'>商业险</text>
+      <text style='float:right'>{{info.insurance_date}}起</text>
+    </view>
+    <view class="content">
+      <text style='color:#333'>交强险</text>
+      <text style='float:right'>{{info.business_date}}起</text>
+    </view>
+  </view>
+  <view class="message-one" style='margin-top:10px;height:200px'>
+    <view class="message-title">
+      <text class="text"></text>报价明细</view>
+    <view class="message-status">保险报价总合计：
+      <text style="font-weight:600">{{info.price}}</text>
+    </view>
+    <view class="bjmx-title">
+      <view class="detail-xz">险种</view>
+      <view class="detail-tbje">投保金额</view>
+      <view class="detail-fy">费用</view>
+    </view>
+    <view wx:for="{{list}}" wx:for-item="items" style='font-size:0.8em;' wx:key="{{id}}">
+      <view class="detail-xz">{{items.title}}</view>
+      <view class="detail-tbje">{{items.set_value}}</view>
+      <view class="detail-fy">￥0.00</view>
+    </view>
+  </view>
+  <view class="{{info.status==0?'pay-view':'hide'}}">
+    <button class="pay-btn" bindtap='pay' data-id='{{orderId}}'>支付订单</button>
+  </view>
+</view>

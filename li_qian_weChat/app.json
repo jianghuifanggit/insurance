@@ -1,0 +1,76 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/agreement/agreement",
+    "pages/message/message",
+    "pages/message_detail/message_detail",
+    "pages/about/about",
+    "pages/about_info/about_info",
+    "pages/about_info_bank/about_info_bank",
+    "pages/about_info_bank/about_info_bank_add",
+    "pages/about_info_realname/about_info_realname",
+    "pages/about_info_realname/about_info_realname_success",
+    "pages/login/login",
+    "pages/login/codelogin",
+    "pages/other/other",
+    "pages/other/introduce",
+    "pages/other/protocol",
+    "pages/other/downapp",
+    "pages/feedback/feedback",
+    "pages/address_list/address_list",
+    "pages/address_edit/address_edit",
+    "pages/address_add/address_add",
+    "pages/car_list/car_list",
+    "pages/car_detail/car_detail",
+    "pages/car_add/car_add",
+    "pages/car_company/car_company",
+    "pages/car_vin/car_vin",
+    "pages/order_list/order_list",
+    "pages/order_detail/order_detail",
+    "pages/pay_money/pay_money",
+    "pages/insure/insure",
+    "pages/search_recode/search_recode",
+    "pages/search_recode_info/search_recode_info",
+    "pages/register/register",
+    "pages/forget/forget"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#000000",
+    "navigationBarTitleText": "力乾车险",
+    "navigationBarTextStyle": "#000000",
+    "enablePullDownRefresh": true
+  },
+  
+  "tabBar": {
+    "color": "#333333",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#e85123",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shouye.png",
+        "selectedIconPath": "images/shouye_sel.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "iconPath": "images/dd.png",
+        "selectedIconPath": "images/dd_sel.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "images/wd.png",
+        "selectedIconPath": "images/wd_sel.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000,
+    "disableScroll": true
+  }
+ 
+}

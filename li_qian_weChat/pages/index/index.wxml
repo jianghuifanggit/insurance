@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 保险公司选择 -->
+  <view class="header">
+    <view class="header-css pl-br" bindtap='linkHtml' data-name="安盛车险">
+      <image class='header-img' mode="scaleToFill" src="../../images/ascx.png"></image>
+      <view class="header-font">安盛车险</view>
+    </view>
+    <view class="header-css" bindtap='linkHtml' style='border-right:1px solid #c8c7cc' data-name="安诚保险">
+      <image class='header-img' mode="scaleToFill" src="../../images/axcx.png"></image>
+      <view class="header-font">安心车险</view>
+    </view>
+
+    <!-- <view class="header-hide">暂未开发</view> -->
+
+   <view class="header-css" bindtap='linkHtml' data-name="利宝车险">
+      <image class='header-img' mode="scaleToFill" src="../../images/lbcx.png"></image>
+      <view class="header-font">利宝车险</view>
+    </view>
+  </view>
+  <view class="header">
+
+    <!-- <view class="header-hide pl-br" style='padding:0;margin-left:5%'>暂未开发</view>
+    <view class="header-hide " style='border-right:1px solid #ccc;'>暂未开发</view>
+    <view class="header-hide">暂未开发</view> -->
+
+    <view class="header-css pl-br" bindtap='linkHtml' data-name="太平车险">
+      <image class='header-img' mode="scaleToFill" src="../../images/zgtp.png"></image>
+      <view class="header-font">太平车险</view>
+    </view>
+    <view class="header-css" bindtap='linkHtml' style='border-right:1px solid #c8c7cc' data-name="人保车险">
+      <image class='header-img' src="../../images/zgrb.png"></image>
+      <view class="header-font">人保车险</view>
+    </view>
+    <view class="header-css" bindtap='linkHtml' data-name="中华车险">
+      <image class='header-img' src="../../images/zhbx.png"></image>
+      <view class="header-font">中华车险</view>
+    </view>
+  </view>
+    <!-- <view class="header" >
+      <image style='height:20px;width:40%;padding:5px' class='' src="../../images/lqaslogo.png"></image>
+      <image style='height:150px;width:100%' class='' src="../../images/asbj.png"></image>
+    </view> -->
+  <!-- 查询车辆 -->
+  <view class="car-search">
+    <view class='car-title'>车辆管理</view>
+    <view class='car-yesno'>未上牌
+      <switch bindchange="switch1Change" />
+    </view>
+    <view class="car-contain">
+      <view class="car-sel">
+        <view class="index_1">承保城市</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <input class='rt index_2' placeholder="选择承保城市" value="{{name}}" />
+          <!-- <view class="rt" name="addressCity" value="{{addressCity}}">{{region[2]}}
+          </view> -->
+          <input class="hide" value="{{addressCity}}" name="addressCity" />
+        </picker>
+      </view>
+      <view class="car-sel">
+        <view class="index_1">车辆牌照</view>
+        <view class="car_plateno">
+          <view class="car_plateno_d1" bindtap="d1" name="platePrefix">{{lcode}}</view>
+          <image class="car_plateno_img" src="../../images/down.png"></image>
+        </view>
+        <input placeholder="请输入车牌号" class='rt index_2' style='width:100px' maxlength="5" bindinput='plateInput' />
+      </view>
+      <button class="car-button" bindtap='goto'> 立即查价 </button>
+      <view class="car-others" open-type='share'>
+        <image class="others-img" src="../../images/friends.png"></image>
+        <view class="others-font">推荐好友</view>
+      </view>
+      <view class="car-others" bindtap='calling'>
+        <image class="others-img" mode="scaleToFill" src="../../images/telephone.png"></image>
+        <view class="others-font">联系客服</view>
+      </view>
+    </view>
+  </view>
+  <!-- 分享好友的作用 -->
+  <button class="share-btn" open-type='share'> 分享按钮</button>
+  <image class='getcode' mode="scaleToFill" src="../../images/xxx1.jpg" bindtap="getcode"></image>
+</view>

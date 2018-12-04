@@ -1,0 +1,25 @@
+<view class="container">
+  <!-- <view class="title">
+    <view class="address">登录</view>
+    <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image>
+  </view> -->
+  <view class='form-box'>
+    <image class='form-icon' mode="scaleToFill" src="../../login-images/phone.png"></image>
+    <input class='form-input' type="text" placeholder="请输入手机号" maxlength="100" bindinput="userNameInput" />
+  </view>
+  <view class='form-box'>
+    <image class='form-icon' mode="scaleToFill" src="../../login-images/password.png"></image>
+    <input class='form-input' type="password" placeholder="请输入密码" maxlength="100" bindinput="pwdInput" />
+  </view>
+  <view class='form-box'>
+    <button class='form-btn' bindtap='goto' loading="{{isloading}}">登录</button>
+  </view>
+  <view class='form-box'>
+    <view class='form-reg' style="color:#666;font-size:15px;float:left" bindtap='register'>注册</view>
+    <view class='form-for'>
+      <text class='padding' bindtap='codelogin'>验证码登录</text>|
+      <text class='padding' bindtap='forget'>忘记密码?</text>
+    </view>
+  </view>
+  <view class='fix-inx' style=" top:{{top}}px;left:{{left}}px;margin: 0% 0rpx 0rpx 0%;" bindtouchmove="setTouchMove"  bindtap='back' >主页</view>
+</view>

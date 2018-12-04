@@ -1,0 +1,19 @@
+/* pages/about_info_realname/about_info_realname_success.wxss */
+@import "../../css/public.wxss";
+@import '../../utils/showtoast.wxss';  
+.photo {
+  width: 100%;
+  background: #fff;
+  padding: 2%;
+  margin-top: -20px;
+  margin-bottom: 10px;
+}
+
+.show-image {
+  width: 96%;
+}
+
+.txt-content .txt3 {
+  height: 40px;
+  line-height: 40px;
+}

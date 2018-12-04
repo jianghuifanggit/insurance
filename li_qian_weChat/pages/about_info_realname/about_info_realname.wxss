@@ -1,0 +1,12 @@
+/* pages/about_info_realname/about_info_realname.wxss */
+@import "../../css/public.wxss";
+
+.info-msg {
+  width: 92%;
+  padding: 0 4%;
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  font-size: 0.9em;
+  margin-bottom:2px
+}

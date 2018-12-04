@@ -1,0 +1,55 @@
+/* pages/about_info_bank/about_info_bank.wxss */
+@import "../../css/public.wxss";
+
+.bank-add {
+  width: 88%;
+  margin: 0 3%;
+  background: #b8b7b7;
+  height: 30px;
+  line-height: 30px;
+  padding: 8px 3%;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+.bank-add .bank-right {
+  transform: rotate(180deg);
+  height: 20px;
+  width: 20px;
+  float: right;
+  margin-top: 5px;
+}
+
+.bank-content {
+  width: 88%;
+  margin: 0 3%;
+  background: #d6575e;
+  height: 80px;
+  line-height: 30px;
+  padding: 8px 3%;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.9em;
+  margin-bottom:10px
+}
+
+.bank-content .bank-bank {
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  line-height: 40px;
+}
+
+.bank-content .bank-bank .bank-img {
+  height: 30px;
+  width: 30px;
+  float: left;
+  padding-right: 5px;
+  margin-top: 5px;
+}
+
+.bank-content .bank-num {
+  float: right;
+  line-height: 40px;
+}

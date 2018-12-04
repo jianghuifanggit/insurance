@@ -1,0 +1,11 @@
+/* pages/other/protocol.wxss */
+@import "../../css/public.wxss";
+
+page{
+  background-color: #fff;
+}
+.com-font{
+  margin:10px;
+  font-size:0.8em;
+  text-indent: 40rpx;
+}

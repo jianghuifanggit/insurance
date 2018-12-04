@@ -1,0 +1,3 @@
+/* pages/search_recode_info/search_recode_info.wxss */
+@import "../../css/public.wxss";
+@import "../../css/detail.wxss";

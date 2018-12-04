@@ -1,0 +1,15 @@
+/* pages/address_edit/address_edit.wxss */
+@import "../../css/public.wxss";
+@import "../../pages/address_add/address_add.wxss";
+
+.delete {
+  text-align: center;
+  width: 100%;
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  font-size: 0.9em;
+  color: #f08519;
+  margin-bottom: 10px;
+}

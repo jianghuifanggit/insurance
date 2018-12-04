@@ -1,0 +1,36 @@
+@import "../../css/public.wxss";
+
+.msg {
+  width: 90%;
+  background: #fff;
+  padding: 0 5%;
+  margin-bottom: 20px;
+}
+
+.msg .msg-title {
+  font-size: 0.8em;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #c5c5c5;
+  font-weight: bold;
+  color: #333;
+}
+
+.msg .msg-img {
+  padding: 10px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.msg .msg-font {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #c5c5c5;
+  font-size: 0.8em;
+}
+
+.msg-icon{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 15px 5px;
+}

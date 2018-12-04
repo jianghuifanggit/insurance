@@ -1,0 +1,22 @@
+<!--pages/about_info_bank/about_info_bank.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">银行卡管理</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <view style='margin-top:10px'>
+    <view class="{{list==''?'hide':'bank-content'}}" wx:for="{{list}}" wx:for-item="items" wx:key="{{id}}" >
+      <view class="bank-bank" >
+        <image class="bank-img" src="../../images/bank.png" ></image>
+        <text>{{items.account}}</text>
+        <view style='float:right' bindtap='deletes' data-id='{{items.id}}'>删除</view>
+      </view>
+       <view wx:if='{{items.id>0}}' class="bank-num">{{card_num[index]}}</view> 
+    </view>
+  </view>
+  <view class="bank-add" bindtap='add'>
+    <view style='float:left'>+ 添加银行卡</view>
+    <image class="bank-right" src="../../images/return.png"></image>
+  </view>
+</view>

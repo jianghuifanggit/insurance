@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="title">
+    <view class="address">确定支付</view>
+    <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image>
+  </view>
+   <view class='mb'></view>
+  <form bindsubmit="formSubmit">
+  <view class='form-box'>
+    <image class='form-icon' mode="scaleToFill" src="../../login-images/card.png"></image>
+    <!-- <input class='form-input' type="text" placeholder="请输入手机号" maxlength="100" bindinput="userNameInput"  /> -->
+    <picker class='form-input' bindchange="bankChange" value="{{index}}" range="{{array}}" style='margin-left:35px;color:#6c6c6c'>
+      <view class="picker" style='line-height:33px'>
+        {{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='form-box'>
+    <image class='form-icon' mode="scaleToFill" src="../../login-images/password.png"></image>
+    <input class='form-input' type="password" name="mobile_code" placeholder="请输入短信验证码" maxlength="6"/>
+  </view>
+  <input class='hide' name="ansheng_OrderId" value='{{ansheng_OrderId}}'/>
+   <input class='hide' name="orderId" value='{{orderId}}'/>
+  <view class='form-box'>
+    <button class='form-btn'  form-type="submit" hover-class="none">确定支付</button>
+  </view>
+   </form>
+</view>

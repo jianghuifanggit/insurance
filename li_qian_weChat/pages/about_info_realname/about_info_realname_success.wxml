@@ -1,0 +1,26 @@
+<import src="../../utils/showtoast.wxml" />  
+<template is="showToast" data="{{showToast: showToast}}" /> 
+<!--pages/about_info_realname/about_info_realname_success.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">实名认证</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <view class="content">
+    <view class="photo">
+      <image class="show-image" mode="aspectFitf" src="../../images/pic2.png" bindtap="gotoShow"></image>
+    </view>
+    <view class="txt-content">
+      <view class="txt2">姓名</view>
+      <input placeholder="请输入你的姓名" class="txt3" bindinput='nameInput' />
+    </view>
+    <view class="txt-content">
+      <view class="txt2">身份证号</view>
+      <input placeholder="请输入你的身份证" class="txt3" bindinput='caridInput' />
+    </view>
+    <view class="btn-area">
+      <button class="btn" bindtap='gotoSumbit'>确认提交</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/about_info_bank/about_info_bank_add.wxml-->
+<import src="../../utils/showtoast.wxml" />  
+<template is="showToast" data="{{showToast: showToast}}" />  
+<!-- //调用提示框 -->
+<view class="container">
+  <view class="title">
+    <view class="address">绑定银行卡</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <view class='form-box' >
+    <view class="form-font">开户行</view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" data-value='{{array[index]}}'>
+      <view class="form-input"  style='line-height:50px;padding-left:28%'>
+        {{array[index]}}
+      </view>
+    </picker>
+  </view>
+  <view class='form-box'>
+    <view class="form-font">银行卡号</view>
+    <input class='form-input' type="text" placeholder="请输入银行卡号" maxlength="20" bindinput="banknumInput" />
+  </view>
+  <view class='form-box' style='margin-top:10px'>
+    <view class="form-font">持卡人</view>
+    <input class='form-input' type="text" placeholder="请输入持卡人姓名" bindinput="userNameInput" />
+  </view>
+  <view class='form-box'>
+    <view class="form-font">持卡人身份证</view>
+    <input class='form-input' type="text" placeholder="请输入持卡人身份证号" maxlength="18" bindinput="idInput" />
+  </view>
+  <view class='form-box'>
+    <view class="form-font">预留手机号</view>
+    <input class='form-input' type="text" placeholder="请输入银行卡预留手机号" maxlength="11" bindinput="phoneInput" />
+  </view>
+  <view class='form-box-btn'>
+    <button class='form-btn' bindtap='goto' loading="{{isloading}}">确认添加</button>
+  </view>
+</view>

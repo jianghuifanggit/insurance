@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="title" >
+    <view class="address">消息中心</view>
+  </view>
+   <view class='mb'></view>
+  <view class="content" wx:for="{{list}}" wx:for-item="items" wx:key="{{id}}">
+    <view class="msg" data-id="{{items.id}}" bindtap='msgDetail'>
+      <view class='msg-title'>{{items.post_title}}</view>
+      <view class='msg-img'>
+        <image src="{{items.thumb}}"></image>
+      </view>
+      <view class='msg-font' style='color:#666;'>{{items.post_keywords}}</view>
+      <view class='msg-font' style='color:#999'>
+        <view style='float:left'>{{items.post_date}}</view>
+        <view>
+          <text style='float:right'>{{items.post_hits}}</text>
+          <image class='msg-icon' src="../../images/icon-show.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

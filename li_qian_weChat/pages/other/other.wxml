@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="title">
+    <view>关于我们</view>
+    <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image>
+  </view>
+   <view class='mb'></view>
+  <view class="logo">
+    <image class='logo-img' mode="scaleToFill" src="../../about-images/logo.png"></image>
+    <view class='logo-font'>力乾车险v1.0.0</view>
+  </view>
+  <view class="content" style='margin-top:30px' bindtap="introduce">
+    <view class='content-font'>公司介绍</view>
+    <image class='content-icon2 next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" bindtap="protocol">
+    <view class='content-font'>车辆注册协议</view>
+    <image class='content-icon2 next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" bindtap="downapp">
+    <view class='content-font'>APP下载</view>
+    <image class='content-icon2 next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" style='margin-top:10px' bindtap="clear">
+    <view class='content-font'>恢复初始设置</view>
+   <image class='content-icon2 next' src="../../images/right.png"></image>
+  </view>
+  <view class="footer">北京东方保险经纪有限公司 版权所有</view>
+</view>

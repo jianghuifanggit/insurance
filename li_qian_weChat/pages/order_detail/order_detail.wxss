@@ -1,0 +1,67 @@
+/* pages/order_detail/order_detail.wxss */
+@import "../../css/public.wxss";
+@import "../../css/detail.wxss";
+
+.insure-tip {
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+  background: #fff7d6;
+}
+
+.insure-img {
+  width: 26px;
+  height: 26px;
+  margin: 2px;
+  float: left;
+  margin-left: 10px;
+}
+
+.insure-text {
+  color: #ff6000;
+  font-size: 0.8em;
+}
+
+.insure-head {
+  width: 100%;
+  background: #fff;
+  height: 160px;
+  margin-bottom: 25px;
+}
+
+.center {
+  width: 100%;
+  text-align: center;
+}
+
+.com-icon {
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+.com_name {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.money-color {
+  font-weight: bold;
+  color: #f08519;
+}
+
+.pay-view {
+  width: 100%;
+  background: #fff;
+  height: 50px;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+.pay-view .pay-btn {
+  background: #f08519;
+  color: #fff;
+  width: 90%;
+  margin: 0 5%;
+  height: 40px;
+}

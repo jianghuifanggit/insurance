@@ -1,0 +1,33 @@
+<!--pages/other_info/other_info.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">个人信息</view>
+    <!-- <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <view class="info-view">
+    <view class="info-left">账号</view>
+    <view class="info-right" style='margin-right:50px'>{{phone}}</view>
+  </view>
+   <view class="info-view" style='margin-bottom:2px' bindtap='rzheng'>
+    <view class="info-left">实名认证</view>
+    <view class="info-right color">{{status}}
+      <image class='info-img' src="../../images/right.png"></image>
+    </view>
+  </view>
+  <view class="info-view" bindtap='bank' >
+    <view class="info-left">银行卡管理</view>
+    <view class="info-right color">{{flag}}
+      <image class='info-img' src="../../images/right.png"></image>
+    </view>
+  </view>
+  <view class="info-view" bindtap='alter'>
+    <view class="info-left">修改登录密码</view>
+    <view class="info-right">
+    <image class='info-img' src="../../images/right.png"></image>
+    </view>
+  </view>
+  <view class='form-box-btn'>
+    <button class='form-btn' loading="{{isloading}}" bindtap='exit'>退出登录</button>
+  </view>
+</view>

@@ -1,0 +1,222 @@
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f5f5f5;
+}
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  border-bottom: 1px solid #c8c7cc;
+  width: 100%;
+  height: 90px;
+  background-color: #fff;
+}
+
+.header-css {
+  width: 30%;
+  height: 80px;
+  float: left;
+  padding: 0;
+  margin: 5px 0;
+  background-color: #fff;
+} 
+
+.header-hide {
+  background: #000;
+  opacity: 0.3;
+  text-align: center;
+  width: 30%;
+  height: 90px;
+  float: left;
+  color: #f5f5f5;
+  line-height: 90px;
+}
+
+.pl-br {
+  padding-left: 5%;
+  border-right: 1px solid #ccc;
+}
+
+.header-img {
+  width: 40%;
+  padding: 0 30%;
+  height: 45px;
+  float: left;
+}
+
+.header-font {
+  width: 60%;
+  margin-left: 25%;
+  font-size: 0.7em;
+  color: #000;
+}
+
+/* 车辆查询 */
+
+.car-search {
+  width: 80%;
+  margin-left: 5%;
+  border: 1px solid #c8c7cc;
+  margin-top: 20px;
+  border-radius: 5px;
+  padding: 5%;
+  height: 230px;
+  background-color: #fff;
+}
+
+.car-title {
+  border-left: 5px solid #f08519;
+  font-size: 0.8em;
+  padding-left: 5px;
+  float: left;
+}
+
+.car-yesno {
+  float: right;
+  font-size: 0.8em;
+}
+
+.car-contain {
+  width: 96%;
+  border: 1px solid #c8c7cc;
+  margin-top: 45px;
+  border-radius: 5px;
+  padding: 0 2%;
+  font-size: 0.8em;
+  height: 81px;
+}
+
+.car-contain .index_1 {
+  float: left;
+  font-size: 0.9em;
+  margin-left: 5px;
+  width: 30%;
+}
+
+.car-contain .car-sel {
+  border-bottom: 1px solid #ddd;
+  height: 40px;
+  line-height: 40px;
+}
+
+.car-contain .index_2 {
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.9em;
+  text-align: right;
+  padding-right: 5px;
+  width:100px
+}
+
+.car_plateno {
+  border: 1px solid #f08519;
+  width: 35px;
+  height: 24px;
+  float: left;
+  margin-top: 5px;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.car_plateno_d1 {
+  color: #f08519;
+  height: 25px;
+  line-height: 25px;
+  font-size: 0.9em;
+}
+
+.car_plateno_img {
+  height: 7px;
+  width: 9px;
+  float: right;
+  margin-top: -16px;
+}
+
+.car-button {
+  background-color: #f08519;
+  margin-top: 15px;
+  color: #fff;
+}
+
+.car-others {
+  float: left;
+  margin-top: 10px;
+  width: 50%;
+  padding: 0;
+}
+
+.others-img {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-left: 20px;
+}
+
+.others-font {
+  float: left;
+  margin-top: 4px;
+}
+
+.provinces {
+  overflow: hidden;
+  background-color: #ced3d9;
+  padding: 5%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.pro_li {
+  font-size: 36rpx;
+  height: 70rpx;
+  width: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border: 2rpx solid #ddd;
+  margin: 6rpx;
+  background-color: #fff;
+}
+
+.keyNums {
+  overflow: hidden;
+  background-color: #ced3d9;
+  padding: 30rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10000;
+}
+
+.pro_d {
+  width: 145rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 36rpx;
+  text-align: center;
+  background-color: #fff;
+  border: 2rpx solid #ddd;
+  margin: 5rpx;
+}
+
+/* 分享按钮样式 */
+
+.share-btn {
+  width: 40%;
+  z-index: 999;
+  margin-left: 10%;
+  float: left;
+  margin-top: -55px;
+  opacity: 0.0;
+}
+
+.getcode{
+  width:100%;
+  height:100px;
+  margin-top:20px
+}

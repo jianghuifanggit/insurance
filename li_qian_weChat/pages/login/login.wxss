@@ -1,0 +1,19 @@
+
+@import "../../css/login.wxss";
+.fix-inx{
+   float: right;
+    background-color:#f08519;
+    position: fixed;
+    bottom: 100px;
+    right: 20px;  
+    width:40px;
+    height:40px;
+    /* border: 0 solid #ffffff; */
+    border-radius: 500px;
+    line-height:40px;
+    font-size:15px;
+    text-align: center;
+    color:#ffffff;
+    box-shadow: 4px 1px 1px #cccccc;
+    opacity: 0.8
+}

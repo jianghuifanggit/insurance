@@ -1,0 +1,75 @@
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f5f5f5;
+}
+
+.title {
+  background-color: #f08519;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.back {
+  float: left;
+  font-size: 1.5em;
+}
+.content-icon {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 15px;
+  margin-top:-35px;
+}
+.form-box {
+  margin-top: 40rpx;
+  padding: 0 30rpx;
+}
+
+.form-icon {
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin-right: 5px;
+}
+
+.form-input {
+  height: 70rpx;
+  line-height: 80rpx;
+  border: 1rpx solid #ccc;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.form-err {
+  color: red;
+  padding: 0 30rpx;
+  font-size: 20rpx;
+}
+
+.form-btn {
+  background-color: #f08519;
+  color: #fff;
+}
+
+.form-reg {
+  color: #666;
+  font-size:0.8em;
+  float: left;
+}
+
+.form-for {
+  color: #f08519;
+  font-size: 0.8em;
+  float: right;
+  margin-right: 5px;
+}
+.padding{
+  padding:0 5px
+}

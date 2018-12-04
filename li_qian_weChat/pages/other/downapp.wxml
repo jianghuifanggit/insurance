@@ -1,0 +1,12 @@
+<!--pages/other/downapp.wxml-->
+<view class="container">
+  <view class="title">
+    <view>APP下载</view>
+    <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image>
+  </view>
+   <view class='mb'></view>
+  <view style='width:100%;text-align:center'>
+    <image class='logo-img' mode="scaleToFill" src="../../about-images/ewm.png"></image>
+    <view class='logo-font'>扫二维码 下载APP</view>
+  </view>
+</view>

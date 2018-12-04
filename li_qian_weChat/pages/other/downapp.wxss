@@ -1,0 +1,13 @@
+/* pages/other/downapp.wxss */
+@import "../../css/public.wxss";
+
+.logo-img {
+  width: 270px;
+  height: 270px;
+  margin: 10px auto;
+}
+
+.logo-font {
+  text-align: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,37 @@
+<!--pages/agreement/agreement.wxml-->
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">{{company}}协议</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='backtap' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <!-- content -->
+  <view>
+    <view class="content-font">
+      保险车辆必须有交通管理部门核发的行驶证和牌号，并经检验合格，否则本保险单无效。
+    </view>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox">
+        <checkbox checked="" value='true'/>同意协议
+      </label>
+    </checkbox-group>
+    <button class="{{disables==true?'content-btn':'content-btn-active'}}" disabled='{{disabled}}' bindtap='nextHtml'>同意</button>
+  </view>
+
+  <!-- footer -->
+  <view class="footer">
+    <view class='footer-nav' bindtap='index'>
+      <image class='footer-nav-img' src="{{indexIcon}}"></image>
+      <view class='footer-nav-name' style='color: #f08519;'>首页</view>
+    </view>
+    <view class='footer-nav' bindtap='message'>
+      <image class='footer-nav-img' src="{{messageIcon}}"></image>
+      <view class='footer-nav-name'>消息</view>
+    </view>
+    <view class='footer-nav' bindtap='about'>
+      <image class='footer-nav-img' src="{{aboutIcon}}"></image>
+      <view class='footer-nav-name'>我的</view>
+    </view>
+  </view>
+</view>

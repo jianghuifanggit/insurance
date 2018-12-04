@@ -1,0 +1,23 @@
+<!--pages/message/message_detail.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+<view class="container">
+  <view class="title">
+    <view class="address">活动详情</view>
+    <image class='content-icon' src="../../images/return.png" bindtap='back'></image>
+  </view>
+   <view class='mb'></view>
+   <view style='padding:10px'>
+  <view class="msg-title">{{info.post_title}}</view>
+  <view class='msg-font'>
+    <view style='float:left'>{{info.post_date}}</view>
+    <view>
+      <text style='float:right'>{{info.post_hits}}</text>
+      <image class="{{id>0?'msg-icon':'hide'}}" src="../../images/icon-show.png"></image>
+    </view>
+  </view>
+  <view><image class='msg-img' src="{{info.thumb}}"></image></view> 
+  <!-- <view>{{info.post_content}}</view> -->
+   <template is="wxParse" data="{{wxParseData:post_content.nodes}}" />
+  </view> 
+</view>

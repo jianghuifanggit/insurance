@@ -1,0 +1,60 @@
+<!--pages/about/about.wxml-->
+<view class="container">
+  <!-- header -->
+  <!-- <view class="title">
+    <view class="address">我的</view>
+  </view> -->
+  <view class='mb'></view>
+  <view class="content" bindtap='info'>
+    <image class='content-icon' src="../../about-images/grzx.png"></image>
+    <view class='content-font'>{{userName}}</view>
+    <image class='content-icon next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" bindtap='recode'>
+    <image class='content-icon' mode="scaleToFill" src="../../about-images/clgl.png"></image>
+    <view class='content-font'>我的保单查询记录</view>
+    <image class='content-icon next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" bindtap='orderList' style='margin-top:10px'>
+    <image class='content-icon' mode="scaleToFill" src="../../about-images/wdwxd.png"></image>
+    <view class='content-font'>我的保单</view>
+    <image class='content-icon next' src="../../images/right.png"></image>
+    <text class="next-font">查看全部订单</text>
+  </view>
+  <view class="baodan">
+    <view class="baodan-view" bindtap='orderList2'>
+      <image class='baodan-icon' mode="scaleToFill" src="../../about-images/hbz.png"></image>
+      <view class='baodan-font' style='font-size:13px'>核保中</view>
+       <view class="{{hb_2==null?'hide':'status'}}">{{hb_2.num}}</view>
+    </view>
+    <view class="baodan-view" bindtap='orderList0'>
+      <image class='baodan-icon' mode="scaleToFill" src="../../about-images/dzf.png"></image>
+      <view class='baodan-font'>待支付</view>
+      <view class="{{hb_0==null?'hide':'status'}}">{{hb_0.num}}</view>
+    </view>
+    <view class="baodan-view" bindtap='orderList1'>
+      <image class='baodan-icon' mode="scaleToFill" src="../../about-images/yfk.png"></image>
+      <view class='baodan-font'>已支付</view>
+    </view>
+  </view>
+  <view class="content" style='margin-top:10px' bindtap='car'>
+    <image class='content-icon' mode="scaleToFill" src="../../about-images/clgl.png"></image>
+    <view class='content-font'>车辆管理</view>
+   <image class='content-icon next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" bindtap='address'>
+    <image class='content-icon' mode="scaleToFill" src="../../about-images/add.png"></image>
+    <view class='content-font'>收件地址</view>
+    <image class='content-icon next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" style='margin-top:10px' bindtap='feedback'>
+    <image class='content-icon' mode="scaleToFill" src="../../about-images/yjfk.png"></image>
+    <view class='content-font'>我要反馈</view>
+    <image class='content-icon next' src="../../images/right.png"></image>
+  </view>
+  <view class="content" bindtap='other'>
+    <image class='content-icon' mode="scaleToFill" src="../../about-images/kfbz.png"></image>
+    <view class='content-font'>关于我们</view>
+    <image class='content-icon next' src="../../images/right.png"></image>
+  </view>
+</view>

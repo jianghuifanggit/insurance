@@ -1,0 +1,51 @@
+<!--pages/car_detail/car_detail.wxml-->
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">车辆详情</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <image class='content-icon' src="../../images/user.png" bindtap='about'></image>
+  </view>
+   <view class='mb'></view>
+  <view class="content">
+    <view class="font-title">
+      <text style='float:left'>{{plate_prefix}}{{plate_no}}</text>
+      <view class="status" >{{apply_status}}</view>
+    </view>
+    <view class="car-message">
+      <text>所有人</text>
+      <text class="get-message">{{owner}}</text>
+    </view>
+    <view class="car-message">
+      <text>车主品牌</text>
+      <text class="get-message">{{brand}}</text>
+    </view>
+   <view class="car-message">
+      <text>车辆识别代码</text>
+      <text class="get-message">{{vin}}</text>
+   </view>
+   <view class="car-message">
+      <text>发动机号</text>
+      <text class="get-message">{{engine_no}}</text>
+   </view>
+   <view class="car-message">
+      <text>注册登记日期</text>
+      <text class="get-message">{{register_date}}</text>
+   </view>
+    <view class="car-message">
+      <text>发证日期</text>
+      <text class="get-message">{{issue_date}}</text>
+   </view>
+   <view class="car-message" style="margin:10px 0">
+      <text>行驶证照片</text>
+      <view src="{{image}}" data-src="{{image}}" bindtap='previewImage' class="get-message" style="color:#f08519">查看</view>
+   </view>
+   <view class="car-message">
+      <text>投保公司</text>
+      <text class="get-message">未投保</text>
+   </view>
+  </view>
+  <view class="{{status==0?'hide':'footer'}}">
+  <button class="footer-btn" bindtap='goto'>我要报价</button>
+  </view>
+</view>

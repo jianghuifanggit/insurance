@@ -1,0 +1,60 @@
+
+.message-one {
+  width: 92%;
+  background: #fff;
+  height: 323px;
+  padding: 5px 4%;
+}
+
+.message-one .message-title {
+  font-weight: 600;
+  font-size: 0.9em;
+  color: #333;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.message-one .message-title .text {
+  border-left: 5px solid #f08519;
+  padding-left: 10px;
+}
+
+.message-one .content {
+  font-size: 0.8em;
+  color: #666;
+  height: 35px;
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 35px;
+}
+
+.message-one .message-status {
+  font-size: 0.8em;
+  color: #f08519;
+  height: 35px;
+  line-height: 40px;
+}
+
+.bjmx-title {
+  color: #666;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.detail-xz {
+  width: 40%;
+  float: left;
+  text-align: center;
+}
+
+.detail-tbje {
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+
+.detail-fy {
+  width: 30%;
+  float: right;
+  text-align: center;
+}

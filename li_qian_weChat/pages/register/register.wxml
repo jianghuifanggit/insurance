@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="title">
+    <view class="address">忘记密码</view>
+    <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image>
+  </view>
+   <view class='mb'></view>
+  <view class='form-box'>
+    <view class="form-font">手机号码</view>
+    <input class='form-input' type="text" placeholder="请输入手机号码" maxlength="11" bindinput="userNameInput" name="phone"  />
+  </view>
+  <view class='form-box'>
+    <view class="form-font">短信验证码</view>
+    <input class='form-input' type="password" placeholder="请输入短信验证码" maxlength="4" name="code" bindinput="codeInput"/>
+    <view class="get-code">
+      <button class="code-active" wx:if='{{!isShow}}' bindtap="getCode">获取验证码</button>
+      <button class="code-hide" wx:if='{{isShow}}'>重新获取({{sec}})</button>
+    </view>
+
+  </view>
+  <view class='form-box' style='margin-top:10px'>
+    <view class="form-font">登录密码</view>
+    <input class='form-input' type="password" placeholder="6-18位数字和字母组合" maxlength="18" bindinput="pwdInput" name="password" />
+  </view>
+   <view class='form-box'>
+    <view class="form-font">确认密码</view>
+    <input class='form-input' type="password" placeholder="请再次输入密码" maxlength="18" bindinput="pwdtwoInput" name="password" />
+  </view>
+  <view class='form-box-btn'>
+    <button class='form-btn'loading="{{isloading}}" bindtap='register'>注册</button>
+  </view>
+</view>

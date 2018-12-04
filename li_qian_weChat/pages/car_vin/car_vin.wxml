@@ -1,0 +1,40 @@
+<!--pages/car_vin/car_vin.wxml-->
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">确认配置型号</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <image class='content-icon' src="../../images/user.png" bindtap='about'></image>
+  </view>
+   <view class='mb'></view>
+  <view class="tip">
+    <image class='icon-warn' src="../../images/warn.png"></image>
+    <view class="warn-font">已根据VIN识别出车型，请选择:</view>
+  </view>
+  <view>
+    <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="bindDownLoad">
+      <radio-group class="radio-group" bindchange="radioChange">
+        <view class="{{list.id<page?'vin-content':'hide'}}" wx:for="{{list}}" wx:for-item="list" wx:key="{{id}}" >
+          <radio class="radio"  value="{{list.id}}" >
+            <view class="vin-left">
+              <view class="vin-title">{{list.modelName}}</view>
+              <view class="vin-detail">品牌：{{list.brand}} 详情：{{list.newsOne}} {{list.newsTwo}}</view>
+            </view>
+            <view class="vin-right">
+              <text class="price-font">参考价</text>
+              <text class="price-num">￥{{list.price}}</text>
+            </view>
+          </radio>
+        </view>
+      </radio-group>
+    </scroll-view>
+    <view class="body-view">
+      <loading hidden="{{hidden}}" bindchange="loadingChange">
+        加载中...
+      </loading>
+    </view>
+    <view class='sumbit'>
+     <button class="btn" bindtap='carmodel_btn'>确认</button>
+    </view>
+  </view>
+</view>

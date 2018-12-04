@@ -1,0 +1,32 @@
+/* pages/agreement/agreement.wxss */
+@import "../../css/public.wxss";
+
+page {
+  background: #fff;
+}
+
+.content-font {
+  font-size: 0.9em;
+  text-indent: 50rpx;
+  text-align: left;
+  margin: 40px 10px 20px 10px;
+}
+
+.checkbox {
+  font-size: 0.7em;
+  margin-left: 15px;
+}
+
+.content-btn {
+  width: 90%;
+  margin: 40px 5%;
+  color: #fff;
+  background: #ccc;
+}
+
+.content-btn-active {
+  width: 90%;
+  margin: 40px 5%;
+  color: #fff;
+  background: #f08519;
+}

@@ -1,0 +1,23 @@
+<!--pages/login/codelogin.wxml-->
+<view class="container">
+  <!-- <view class="title">
+    <view class="address">验证码登录</view>
+    <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image>
+  </view>
+   <view class='mb'></view> -->
+  <view class='form-box'>
+    <image class='form-icon' mode="scaleToFill" src="../../login-images/phone.png"></image>
+    <input class='form-input' type="text" placeholder="请输入手机号" maxlength="11" bindinput="userNameInput" />
+  </view>
+  <view class='form-box'>
+    <image class='form-icon' mode="scaleToFill" src="../../login-images/password.png"></image>
+    <input class='form-input' type="password" placeholder="请输入短信验证码" maxlength="4" name="code" bindinput="codeInput"/>
+    <view class="get-code">
+      <button class="code-active" wx:if='{{!isShow}}' bindtap="getCode">获取验证码</button>
+      <button class="code-hide" wx:if='{{isShow}}'>重新获取({{sec}})</button>
+    </view>
+  </view>
+  <view class='form-box'>
+    <button class='form-btn' bindtap='goto' loading="{{isloading}}">验证码登录</button>
+  </view>
+</view>

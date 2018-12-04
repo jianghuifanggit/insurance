@@ -1,0 +1,30 @@
+/* pages/login/codelogin.wxss */
+@import "../../css/login.wxss";
+/* 验证码样式 */
+
+.get-code {
+  width: 40%;
+  height: 50px;
+  float: right;
+  margin-top: -40px;
+  margin-left:30px
+}
+
+.code-active {
+  font-size: 0.7em;
+  color: #f08519;
+  border: 1px solid #f08519;
+  border-radius: 10px;
+  margin-left:10%;
+  z-index: 999
+}
+.code-hide {
+  font-size: 0.7em;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 60%;
+   /* margin-top: 10% ; */
+  margin-left:10%;
+  z-index: 999
+}

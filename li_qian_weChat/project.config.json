@@ -1,0 +1,83 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wxc68b2a60d880cad5",
+	"projectname": "%E5%8A%9B%E4%B9%BE",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 6,
+			"list": [
+				{
+					"id": 0,
+					"name": "address_about",
+					"pathName": "pages/car_company/car_company",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "car_list",
+					"pathName": "pages/car_list/car_list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "车辆详情",
+					"pathName": "pages/car_detail/car_detail",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "添加车辆",
+					"pathName": "pages/car_company/car_company",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "险种选择",
+					"pathName": "pages/insure/insure",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "型号",
+					"pathName": "pages/car_vin/car_vin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login",
+					"pathName": "pages/login/login",
+					"query": ""
+				}
+			]
+		}
+	}
+}

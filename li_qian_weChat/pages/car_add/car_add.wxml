@@ -1,0 +1,149 @@
+<!--pages/car_add/car_add.wxml-->
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">添加车辆</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <image class='content-icon' src="../../images/user.png" bindtap='about'></image>
+  </view>
+   <view class='mb'></view>
+  <view class="content">
+    <view class="photo">
+    <image class="img" bindload="imageLoad"  style="width: {{imagewidth}}px; height: 240px;" src="{{base64}}"  bindtap="uploadImage"></image>
+      <view class='photo-txt' bindtap="processImage">*请认真检查识别结果，可手动修改</view>
+    </view> 
+    <canvas canvas-id="myCanvas" style='height:400px;width:600px;z-index:-9999;opacity:0'></canvas>
+    <canvas style="width:2px;height:2px;visibility:hidden;" canvas-id="judgeCanvas"></canvas>
+    <form bindsubmit="formSubmit">
+      <!-- 车主信息 -->
+      <input name="base" value="{{base64}}" class="hide"/>
+      <input name="xsz_img" value="{{xsz_img}}" class="hide"/>
+      <view class="xiugai">
+        <view class="txt-title xiugai-bj" style='height:30px;padding-top:0px'>
+        <view class="title-font">车主信息</view>
+        </view>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">车主姓名</view>
+        <input placeholder="车主姓名" class="txt3" name="owner" value="{{owner}}" />
+        <image class='why' mode="scaleToFill" src="../../images/why02.png"></image>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">证件号码</view>
+        <input placeholder="请输入身份证号" class="txt3" maxlength="18" name="card_id" value="{{card_id}}" />
+        <image class='why' mode="scaleToFill" src="../../images/why02.png"></image>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">手机号码</view>
+        <input placeholder="请输入手机号码" class="txt3" maxlength="11" name="phone" value="{{phone}}" />
+      </view>
+      <!-- 车辆信息 -->
+      <view class="txt-title">
+        <view class="title-font">车辆信息</view>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">地区选择</view>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+          <view class="picker" style='color:#888;float:right' name="addressCity" value="{{addressCity}}">{{name}} >
+          </view>
+          <input class="hide" value="{{addressCity}}" name="addressCity" />
+          <input class="hide" value="{{citycode}}" name="cityCode" />
+        </picker>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">品牌关键字</view>
+        <input placeholder="请输入车辆品牌类型" class="txt3" value="{{cartype}}" name="brand" />
+        <image class='why' mode="scaleToFill" src="../../images/why02.png"></image>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">车牌号</view>
+        <view class="car_plateno">
+          <view class="car_plateno_d1" bindtap="d1">{{lcode}}</view>
+          <image class="car_plateno_img" src="../../images/down.png"></image>
+           <input class="hide" value="{{lcode}}" name="platePrefix" />
+        </view>
+        <input type="idcard" placeholder="请输入车牌号" class="txt3" value="{{plateNo}}" maxlength="5" name="plateNo" style='width:48%;margin-left:5px' />
+      </view>
+      <view class="txt-content">
+        <view class="txt2">车辆识别代码</view>
+        <input type="idcard" placeholder="车辆识别代码" class="txt3" value="{{vin}}" name="vin" />
+        <image class='why' mode="scaleToFill" src="../../images/why02.png"></image>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">发动机号</view>
+        <input type="idcard" placeholder="发动机号" class="txt3" value="{{engineNo}}" name="engineNo" />
+        <image class='why' mode="scaleToFill" src="../../images/why02.png"></image>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">注册日期</view>
+        <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+          <view class="picker" style='color:#888;float:right' name="registerDate">{{registerDate}} > </view>
+          <input class="hide" value="{{registerDate}}" name="registerDate" />
+        </picker>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">是否一年之内过户车</view>
+        <switch style='float:right' bindchange="transferflag" name="transferflag" check/>
+      </view>
+      <view class="{{transferflag==true?'txt-content':'hide'}}">
+        <view class="txt2">过户日期</view>
+        <picker mode="date" value="{{transferDate}}" start="1999-01-01" end="2999-12-12" bindchange="transferDate">
+          <view class="picker" style='color:#888;float:right' name="transferDate">{{transferDate}} > </view>
+          <input class="hide" value="{{transferDate}}" name="transferDate" />
+        </picker>
+      </view>
+
+      <!-- 被投保人与被保险人 -->
+      <view class="txt-title">
+        <view class="title-font">被投保人与被保险人</view>
+      </view>
+      <view class="txt-content">
+        <view class="txt2">投保人同车主</view>
+        <switch style='float:right' bindchange="applystatus" checked='{{check1}}' name="applystatus" />
+        <input class="hide" name="apply_status" value="{{apply_status}}" />
+      </view>
+      <view class="{{apply_status==0?'txt-content':'hide'}}">
+        <view class="txt2">投保人</view>
+        <input placeholder="投保人姓名" class="txt3" name="apply_name" value="{{apply_name}}" />
+      </view>
+      <view class="{{apply_status==0?'txt-content':'hide'}}">
+        <view class="txt2">身份证号</view>
+        <input placeholder="请输入身份证号" class="txt3" maxlength="18" name="apply_card_id" value="{{apply_card_id}}" />
+      </view>
+      <view class="{{apply_status==0?'txt-content':'hide'}}">
+        <view class="txt2">手机号码</view>
+        <input placeholder="请输入手机号码" class="txt3" maxlength="11" name="apply_phone" value="{{apply_phone}}" />
+      </view>
+      <view class="{{apply_status==0?'txt-content':'hide'}}">
+        <view class="txt2">地址</view>
+        <input placeholder="请输入地址" class="txt3" name="apply_address" value="{{apply_address}}" />
+      </view>
+      <!-- 被保险人同车主-->
+      <view class="txt-content" style="margin-top:10px">
+        <view class="txt2">被保险人同车主</view>
+        <switch style='float:right' bindchange="insuredstatus" checked='{{check2}}' name="insuredstatus"/>
+        <input class="hide" name="insured_status" value="{{insured_status}}" />
+      </view>
+      <view class="{{insured_status==0?'txt-content':'hide'}}">
+        <view class="txt2">被保险人</view>
+        <input placeholder="被保险人姓名" class="txt3" name="insured_name" value="{{insured_name}}" />
+      </view>
+      <view class="{{insured_status==0?'txt-content':'hide'}}">
+        <view class="txt2">身份证号</view>
+        <input placeholder="请输入身份证号" class="txt3" maxlength="18" name="insured_card_id" value="{{insured_card_id}}" />
+      </view>
+      <view class="{{insured_status==0?'txt-content':'hide'}}">
+        <view class="txt2">手机号码</view>
+        <input placeholder="请输入手机号码" class="txt3" maxlength="11" name="insured_phone" value="{{insured_phone}}" />
+      </view>
+      <view class="{{insured_status==0?'txt-content':'hide'}}">
+        <view class="txt2">地址</view>
+        <input placeholder="请输入地址" class="txt3" name="insured_address" value="{{insured_address}}" />
+      </view>
+
+      <view class="btn-area">
+        <button class="btn" form-type="submit" hover-class="none">确认提交</button>
+      </view>
+    </form>
+  </view>
+</view>

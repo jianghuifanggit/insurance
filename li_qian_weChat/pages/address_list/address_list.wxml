@@ -1,0 +1,24 @@
+<!--pages/address_list/address_list.wxml-->
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">收件地址</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <view class="address-add" bindtap='add'>添加</view>
+  </view>
+   <view class='mb'></view>
+  <view class="content" wx:for="{{list}}" wx:for-item="items" wx:key="{{id}}">
+  <view bindtap="edit" id="{{items.id}}">
+    <view class="content-font">
+      <text>{{items.receivename}}</text>
+      <text style='color:#fff'></text>
+      <text style='float:right'>{{items.phone}}</text>
+    </view>
+    <view class="content-font" style='padding-bottom:20px'>
+      <text wx:if="{{items.status>0}}" style='color:#f08519'>[默认]</text>
+      <text>{{items.city}} {{items.address}}</text>
+    </view>
+    </view>
+  </view>
+  <view class='fix-inx' style=" top:{{top}}px;left:{{left}}px;margin: 0% 0rpx 0rpx 0%;" bindtouchmove="setTouchMove"  bindtap='add' >添加</view>
+</view>

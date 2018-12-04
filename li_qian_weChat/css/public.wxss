@@ -1,0 +1,190 @@
+/* header */
+
+page {
+  display: block;
+  min-height: 100%;
+  background-color: #f5f5f5;
+}
+
+.title {
+  background-color: #f08519;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  top:0;
+  position:fixed;
+  width:100%;
+  z-index: 999;
+  display: none
+}
+
+.back {
+  float: left;
+  font-size: 1.5em;
+}
+
+.content-icon {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 15px;
+  margin-top: -35px;
+}
+
+/* 其他 */
+
+.btn {
+  width: 90%;
+  background: #f08519;
+  color: #fff;
+  margin: 20px 5%;
+}
+
+.txt-content {
+  background: #fff;
+  width: 94%;
+  padding: 1% 3%;
+  margin-bottom: 2px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.7em;
+}
+
+.txt2 {
+  float: left;
+  width: 35%;
+}
+
+/* 登录注册 */
+
+.form-box {
+  padding: 0 30rpx;
+  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.form-font {
+  font-size: 0.8em;
+  float: left;
+  width: 25%;
+  height: 60px;
+  line-height: 60px;
+}
+
+.form-input {
+  height: 60px;
+  line-height: 70px;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+
+/* 验证码样式 */
+
+.get-code {
+  width: 40%;
+  height: 60px;
+  float: right;
+  margin-top: -60px;
+  margin-left: 30px;
+}
+
+.code-active {
+  font-size: 0.7em;
+  color: #f08519;
+  border: 1px solid #f08519;
+  border-radius: 10px;
+  height: 60%;
+  margin-top: 10%;
+  margin-left: 10%;
+  z-index: 999;
+}
+
+.code-hide {
+  font-size: 0.7em;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  height: 60%;
+  margin-top: 10%;
+  margin-left: 10%;
+  z-index: 999;
+}
+
+.form-box-btn {
+  margin: 30px 10px;
+  border: none;
+}
+
+.form-box-btn .form-btn {
+  background-color: #f08519;
+  color: #fff;
+}
+/* 底部样式 */
+
+.footer {
+  width: 90%;
+  height: 42px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  padding: 2% 5%;
+  border:1px solid #f5f5f5
+}
+
+.footer .footer-nav {
+  width: 30%;
+  float: left;
+  text-align: center;
+}
+
+.footer .footer-nav .footer-nav-img {
+  width: 26%;
+  height: 29px;
+  margin: 0 42%;
+}
+
+.footer .footer-nav .footer-nav-name {
+  font-size: 0.66em;
+  margin-top: -5px;
+  font-weight: bold;
+  width: 26%;
+  margin-left: 42%;
+  color:#666;
+}
+
+/* 颜色 */
+.col {
+  color: #f08519;
+}
+
+.bg-col {
+  background-color: #f08519;
+}
+
+.bd-col {
+  border-color: #f08519;
+}
+
+/* 附加 */
+/* .mb{
+  height: 50px; 
+} */
+/* 浮窗样式 */
+.fix-inx{
+   float: right;
+    background-color:#f08519;
+    position: fixed;
+    bottom: 100px;
+    left: 20px;  
+    width:40px;
+    height:40px;
+    /* border: 0 solid #ffffff; */
+    border-radius: 500px;
+    line-height:40px;
+    font-size:15px;
+    text-align: center;
+    color:#ffffff;
+    box-shadow: 4px 1px 1px #cccccc;
+    opacity: 0.8
+}

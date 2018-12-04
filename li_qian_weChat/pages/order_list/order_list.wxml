@@ -1,0 +1,25 @@
+<!--pages/order_list/order_list.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">我的保单</view>
+    <!-- <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <view class="order-list" wx:for="{{list}}" wx:for-item="items" wx:key="{{id}}">
+     <view class="order-plate">{{items.plate_prefix}}{{items.plate_no}}</view>
+     <view class="order-status" wx:if="{{items.status==1}}">已支付</view> 
+     <view class="order-status" wx:elif="{{items.status==2}}">核保中</view> 
+    <view class="order-status" wx:elif="{{items.status==3}}">核保失败</view> 
+     <view class="order-status" style='' wx:else>待支付</view> 
+    <view class="order-detail">保单总价:
+      <text style='color:#f08519'>{{items.price}}</text>
+    </view>
+    <view class="order-detail">投保日期:{{items.addtime}}</view>
+    <view class="order-detail">投保公司:{{items.com_name}}</view> 
+    <view>
+        <view class="order-btn" bindtap="bdDetail" data-id="{{items.id}}" style='color:#666;border-color:#ccc'>详情</view>
+				<view class="order-btn" bindtap="bdRefresh" data-id="{{items.id}}" data-name="{{items.class_name}}"  wx:if="{{items.status==2}}">刷新核保状态</view> 
+				<view class="order-btn" bindtap="bdDetail" data-id="{{items.id}}" wx:else >前往支付</view> 
+    </view>
+  </view>
+</view>

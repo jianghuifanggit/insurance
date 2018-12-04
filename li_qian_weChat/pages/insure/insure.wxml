@@ -1,0 +1,78 @@
+<!--pages/insure/insure.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">投保</view>
+    <!-- <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+    <image class='content-icon' mode="scaleToFill" src="../../images/user.png" bindtap='about'></image>
+  </view>
+   <view class='mb'></view>
+  <form bindsubmit="formSubmit">
+    <view class="header">
+    <!--car_id com_id-->
+    <input class="hide" value="{{car_id}}" name="car_id"></input>
+    <input class="hide" value="{{com_id}}" name="com_id"></input>
+      <image class="header-img" mode="scaleToFill" src="../../images/logo.png" bindtap='about'></image>
+      <view class="header-font">
+        <view wx:if="{{plate_no==''}}">新车未上牌</view>
+        <view wx:else>{{plate_prefix}} {{plate_no}}</view>
+        <view class="header-car">
+          <text wx:if="{{owner=='false'}}">车主：{{apply_name}}</text>
+          <text wx:else>车主：{{owner}}</text>
+          <text style='margin-left:10px'>车型：{{brand}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="insure-switch">
+      <view style='float:left'>交强险/车船税</view>
+      <switch style='float:right' bindchange="apply_status" name="insure_jq" />
+    </view>
+    <view class="{{apply_status==true?'txt-content':'hide'}}">
+      <view class="txt2">生效日期</view>
+      <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange">
+        <view class="picker" style='color:#888;float:right'>{{registerDate}} > </view>
+        <input class="hide" value="{{registerDate}}" name="insure_jq_date"></input>
+      </picker>
+    </view>
+    <view class="insure-switch">
+      <view style='float:left'>商业险</view>
+      <switch style='float:right' bindchange="apply_status2" name="insure_sy" />
+    </view>
+    <view class="{{apply_status2==true?'txt-content':'hide'}}">
+      <view class="txt2">生效日期</view>
+      <picker mode="date" value="{{dateValue}}" start="1999-01-01" end="2999-12-12" bindchange="datePickerBindchange2">
+        <view class="picker" style='color:#888;float:right' name="insure_sy_date">{{registerDate2}} > </view> 
+        <input class="hide" value="{{registerDate2}}" name="insure_sy_date"></input>
+      </picker>
+    </view>
+    <view class="{{apply_status2==true?'content':'hide'}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="items">
+    <!--list中的值-->
+    <input class="hide" value="{{check[idx]=='1'?items.title:''}}" name="info[{{items.id}}][title]"></input>
+    <input class="hide" value="{{check[idx]=='1'?items.code:''}}" name="info[{{items.id}}][code]"></input>
+    <input class="hide" value="{{check[idx]=='1'?items.ac_code:''}}" name="info[{{items.id}}][ac_code]"></input>
+    <input class="hide" value="{{check[idx]=='1'?items.id:''}}" name="info[{{items.id}}][id]"></input>
+    <input class="hide" value="{{check[idx]=='1'?'1':''}}" name="info[{{items.id}}][status]"></input>
+    <view class="{{check[idx]=='1'?'item-title-active':'item-title'}}">
+        <checkbox-group bindchange="checkboxChange" data-insure-id='{{items.id}}'>
+          <label class="checkbox">
+            <checkbox value="{{items.id}}" checked="{{items.risk==1?'true':''}}" />{{items.title}}
+          </label>
+        </checkbox-group>
+      </view>
+      <view class="{{check[idx]=='1'&&items.status==1?'item-no':'hide'}}">
+        <checkbox checked="checked" />不计免赔
+      </view>
+      <view wx:if="{{items.set_arr==''}}" class="{{check[idx]=='1'?'item-money':'hide'}}">投保</view>
+      <view wx:else class="{{check[idx]=='1'?'item-money':'hide'}}">
+        <picker bindchange="bindPickerChange" data-insure-id='{{items.id}}' value="{{index}}" range="{{items.set_arr}}">
+          <view class="picker">
+            <input class="select_set" value="{{info[idx]==items.id?items.set_arr[0]:info[idx]}}"></input>
+          </view>
+          <image class="down-img" mode="scaleToFill" src="../../images/down.png"></image>
+        </picker>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button class="btn" form-type="submit" hover-class="none">确认选择</button>
+    </view>
+  </form>
+</view>

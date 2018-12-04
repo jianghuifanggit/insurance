@@ -1,0 +1,93 @@
+/* pages/car_vin/car_vin.wxss */
+@import "../../css/public.wxss";
+
+.tip {
+  height: 30px;
+  background: #fff7d6;
+  font-size: 0.7em;
+  color: #f08519;
+}
+
+.tip .icon-warn {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  float: left;
+}
+
+.tip .warn-font {
+  height: 30px;
+  line-height: 30px;
+  float: left;
+}
+
+.vin-content {
+  width: 94%;
+  background: #fff;
+  padding: 3%;
+  margin-bottom: 2px;
+}
+
+.vin-left {
+  width: 70%;
+  float: left;
+}
+
+.vin-left .vin-title {
+  width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.8em;
+  color: #333;
+  margin-left: 10px;
+}
+
+.vin-left .vin-detail {
+  width: 230px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.7em;
+  color: #999;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.vin-right {
+  width: 30%;
+  float: left;
+}
+
+.vin-right .price-font {
+  float: right;
+  color: #333;
+  font-size: 0.8em;
+  width:100%;
+  text-align:right;
+}
+
+.vin-right .price-num {
+  float: right;
+  color: #f08519;
+  font-size: 0.8em;
+  margin-top: 10px;
+  width:100%;
+  text-align:right;
+
+}
+.sumbit {
+  position: absolute;
+  bottom: 0px;
+  background: #fff;
+  height: 60px;
+  width: 100%;
+}
+.sumbit .btn {
+  background: #f08519;
+  color: #fff;
+  width: 84%;
+  height: 40px;
+  margin-left: 8%;
+  margin-top: 10px;
+}

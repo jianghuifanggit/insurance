@@ -1,0 +1,35 @@
+/* pages/search_recode/search_recode.wxss */
+@import "../../css/public.wxss";
+
+.detail {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  margin-top: -15px;
+  margin-bottom: 25px;
+}
+
+.detail-title {
+  width: 70%;
+  float: left;
+  margin: 15px;
+  font-size: 0.9em;
+}
+
+.detail-status {
+  width: 20%;
+  float: left;
+  background: #a5a5a5;
+  text-align: center;
+  font-size: 0.7em;
+  color: #fff;
+  padding: 5px 0px;
+}
+
+.detail-date {
+  width: 100%;
+  font-size: 0.8em;
+  float: left;
+  color: #666;
+  margin-left: 15px;
+}

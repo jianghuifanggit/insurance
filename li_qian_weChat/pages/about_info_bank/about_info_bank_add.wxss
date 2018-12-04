@@ -1,0 +1,14 @@
+/* pages/about_info_bank/about_info_bank_add.wxss */
+@import "../../css/public.wxss";
+@import '../../utils/showtoast.wxss';  
+.form-font {
+  height: 50px;
+  line-height: 50px;
+  font-size:0.7em;
+}
+
+.form-input {
+  height: 50px;
+  line-height: 60px;
+  font-size:0.7em;
+}

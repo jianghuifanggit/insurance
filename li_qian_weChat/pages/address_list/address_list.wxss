@@ -1,0 +1,19 @@
+/* pages/address_list/address_list.wxss */
+@import "../../css/public.wxss";
+.address-add {
+  float: right;
+  font-size: 0.8em;
+  padding-right: 10px;
+  margin-top:-50px;
+}
+
+.content {
+  width: 100%;
+  background: #fff;
+  margin-top: 10px;
+}
+
+.content-font {
+  font-size: 0.8em;
+  padding: 10px;
+}

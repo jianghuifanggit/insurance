@@ -1,0 +1,141 @@
+/* pages/insure/insure.wxss */
+@import "../../css/public.wxss";
+
+.header {
+  width: 100%;
+  height: 80px;
+  background: #fff;
+}
+
+.header-img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 15px;
+}
+
+.header-font {
+  font-size: 0.9em;
+  margin-top: 15px;
+  float: left;
+}
+
+.header-car {
+  margin-top: 10px;
+  font-size: 0.8em;
+  color: #666;
+}
+
+.insure-switch {
+  width: 94%;
+  padding: 0 3%;
+  height: 50px;
+  line-height: 50px;
+  background: #fff;
+  margin-top: 10px;
+  font-size: 0.8em;
+  color:#333;
+  margin-bottom: 2px
+
+}
+
+.content{
+  width:90%;
+  height:40px;
+  background:#fff;
+  line-height:40px;
+  font-size:0.7em;
+ padding:0 5%;
+ border-bottom:1px solid #f5f5f5
+}
+.content .item-title-active{
+  float:left;
+  width:42%;
+  font-size:0.9em;
+  color:#333;
+}
+.content .item-title{
+  float:left;
+  width:42%;
+  font-size:0.9em;
+  color:#c5c5c5;
+}
+/* checkbox未选中时样式 */
+.content .item-title-active checkbox .wx-checkbox-input{  
+  border-radius: 30rpx;
+  height: 30rpx;
+  width: 30rpx;
+  margin-right:5px
+}
+
+/* checkbox选中时样式 */
+.content .item-title-active checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  background-color: #f08519;
+  border: 2rpx solid  #f08519;
+  color:#fff;
+  border-radius: 20rpx;
+  margin-right:5px;
+}
+.content .item-title checkbox .wx-checkbox-input{  
+  border-radius: 30rpx;
+  height: 30rpx;
+  width: 30rpx;
+  margin-right:5px
+}
+
+/* checkbox选中时样式 */
+.content .item-title checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  background-color: #f08519;
+  border: 2rpx solid  #f08519;
+  color:#fff;
+  border-radius: 20rpx;
+  margin-right:5px;
+}
+.content .item-no{
+  float:left;
+  width:28%;
+  margin-left:10px;
+  color:#0093ff;
+  font-size:0.9em;
+}
+
+/* checkbox未选中时样式 */
+.content .item-no checkbox .wx-checkbox-input{ 
+  height: 25rpx;
+  width: 25rpx;
+  margin-right:5px
+}
+
+/* checkbox选中时样式 */
+.content .item-no checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+  background-color: #f08519;
+  border: 2rpx solid  #f08519;
+  color:#fff;
+  margin-right:4px;
+  margin-top:-1px;
+  height: 35rpx;
+  width: 35rpx;
+}
+
+.content .item-money{
+  width:20%;
+  float:right;
+  color:#333;
+  font-size:0.9em;
+  text-align:right;
+}
+
+.content .item-money .picker{
+ width:70%;
+ float:left;
+ color:#0093ff;
+height:20px;
+margin-top:10px
+}
+.content .item-money .down-img{
+ width:10px;
+ float:left;
+ height:10px;
+ margin-top:15px;
+ margin-left:5px;
+}

@@ -1,0 +1,16 @@
+<!--pages/about_info_realname/about_info_realname.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">实名认证</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+  <view class='mb'></view>
+  <view class="info-msg">
+    <text>姓名</text>
+    <text style='float:right'>{{data.realname}}</text>
+  </view>
+  <view class="info-msg">
+    <text>身份证号</text>
+    <text style='float:right'>{{data.card_id}}</text>
+  </view>
+</view>

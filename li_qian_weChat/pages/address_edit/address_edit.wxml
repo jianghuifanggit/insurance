@@ -1,0 +1,44 @@
+<view class="container">
+  <!-- header -->
+  <view class="title">
+    <view class="address">修改收货地址</view>
+    <!-- <image class='content-icon' src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+   <view class='mb'></view>
+  <form bindsubmit="formSubmit">
+  <view class="address-new">
+    <text class="address-text">收件人</text>
+    <input class="address-input" name="receivename" value="{{receivename}}" placeholder="{{receivename}}" />
+  </view>
+  <view class="address-new">
+    <text class="address-text">手机号码</text>
+    <input class="address-input" name="phone" placeholder="{{phone}}" value="{{phone}}"/>
+  </view>
+  <view class="address-new">
+    <text class="address-text">邮政编码</text>
+    <input class="address-input" name="zip" placeholder="{{zip}}" value="{{zip}}" />
+  </view>
+  <view class="address-new">
+    <text class="address-text">地区选择</text>
+    <picker mode="region" bindchange="bindRegionChange" value="{{city}}" custom-item="{{customItem}}">
+      <view class="picker" style='color:#888'>
+        {{city}}
+      </view>
+    </picker>
+  </view>
+  <input class="hide" name="city" value="{{city}}"/>
+    <input class="hide" name="status" value="{{status}}"/>
+    <input class="hide" name="id" value="{{id}}"/>
+  <view class="data">
+    <input class="data-input" name="address" placeholder="{{address}}" />
+    <view class="address-new">
+      <text class="address-text" style='font-size:1em'>设为默认</text>
+      <switch checked='{{status == 0 ? "":status}}' class="data-switch" bindchange="switch1Change" type="text" />
+    </view>
+  </view>
+  <view class="delete" bindtap='godelete' data-id="{{id}}">删除地址</view>
+  <view>
+    <button class='form-btn' form-type="submit" hover-class="none">确认修改</button>
+  </view>
+  </form>
+</view>

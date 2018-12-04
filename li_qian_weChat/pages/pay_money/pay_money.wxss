@@ -1,0 +1,2 @@
+/* pages/pay_money/pay_money.wxss */
+@import "../../css/login.wxss";

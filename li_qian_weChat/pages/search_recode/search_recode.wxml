@@ -1,0 +1,16 @@
+<!--pages/search_recode/search_recode.wxml-->
+<view class="container">
+  <view class="title">
+    <view class="address">保单查询记录</view>
+    <!-- <image class='content-icon' mode="scaleToFill" src="../../images/return.png" bindtap='back' style='float:left'></image> -->
+  </view>
+   <view class='mb'></view>
+  <view class="record" wx:for="{{list}}" wx:for-item="items" style='margin-top:20px' wx:key="{{id}}">
+    <view class="{{items.plate_no==null?'hide':'detail'}}" data-id="{{items.id}}" bindtap='detail'>
+      <view class="detail-title">{{items.plate_prefix}}·{{items.plate_no}}</view>
+      <view class="detail-status">{{items.status}}</view>
+      <view class="detail-date" >申请日期:{{items.addtime_str}}</view>
+    </view>
+  </view>
+  <view class='fix-inx' style=" top:{{top}}px;left:{{left}}px;margin: 0% 0rpx 0rpx 0%;" bindtouchmove="setTouchMove"  bindtap='back' >我的</view>
+</view>
